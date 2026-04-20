@@ -48,3 +48,25 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Testing
+
+Backend tests live in the `tests/` directory at the repo root and use the synchronous FastAPI `TestClient`. Each test follows the **AAA (Arrange-Act-Assert)** pattern.
+
+1. Install all dependencies from the repo root (if not already done):
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Run the full test suite from the repo root:
+
+   ```
+   pytest
+   ```
+
+3. Run only the backend tests:
+
+   ```
+   pytest tests/test_app.py -q
+   ```
